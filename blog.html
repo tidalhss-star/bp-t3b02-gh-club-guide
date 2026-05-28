@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 | T3B02 GH 클럽 가이드</title>
+    <meta name="description" content="T3B02 GH 클럽의 실제 실적 데이터와 업계 분석. VIP 서비스의 현실, 입장 시간대별 체류객 통계, 2025년 Q1 기준 객단가 변화 추이.">
+    <meta name="keywords" content="T3B02 클럽, GH 클럽, 공항 클럽 리뷰, 라운지 이용 팁, VIP 라운지, 공항 클럽 데이터, 클럽 실적 분석">
+    <link rel="canonical" href="https://t3b02-gh-club-guide.pages.dev/blog/">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <!-- OG 메타 -->
+    <meta property="og:title" content="블로그 | T3B02 GH 클럽 가이드">
+    <meta property="og:description" content="T3B02 GH 클럽의 실제 실적 데이터와 업계 분석. VIP 서비스의 현실, 입장 시간대별 체류객 통계, 2025년 Q1 기준 객단가 변화 추이.">
+    <meta property="og:image" content="https://t3b02-gh-club-guide.pages.dev/og-blog.jpg">
+    <meta property="og:url" content="https://t3b02-gh-club-guide.pages.dev/blog/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="T3B02 GH 클럽 가이드">
+    <meta property="og:locale" content="ko_KR">
+    <style>
+        /* ===== BRUTALIST-AVANT-GARDE DESIGN SYSTEM ===== */
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent: #ff3c00;
+            --accent-dim: #cc2f00;
+            --border: #2a2a2a;
+            --card-bg: #1a1a1a;
+            --font-mono: 'Courier New', Courier, monospace;
+            --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --grid-gap: 1.5rem;
+            --radius: 0;
+            --shadow: 4px 4px 0 rgba(255, 60, 0, 0.3);
+            --transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- LAYOUT --- */
+        .site-grid {
+            display: grid;
+            grid-template-columns: 1fr min(1100px, 95%) 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+        .site-grid > * {
+            grid-column: 2;
+        }
+
+        /* --- HEADER --- */
+        header {
+            padding: 1.5rem 0;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .site-title {
+            font-family: var(--font-mono);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .site-title:hover {
+            text-shadow: 0 0 8px var(--accent);
+        }
+
+        /* --- HAMBURGER MENU (Pattern) --- */
+        .hamburger-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .hamburger-checkbox {
+            display: none;
+        }
+
+        .hamburger-label {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .hamburger-label:hover {
+            border-color: var(--accent);
+        }
+        .hamburger-label span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        .hamburger-checkbox:checked + .hamburger-label span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger-checkbox:checked + .hamburger-label span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-checkbox:checked + .hamburger-label span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            z-index: 100;
+            padding: 1rem;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .hamburger-checkbox:checked ~ .nav-menu {
+            display: flex;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.25rem 0;
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+        }
+        nav a:hover,
+        nav a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* --- MAIN CONTENT --- */
+        main {
+            padding: 2.5rem 0;
+            display: grid;
+            gap: 2rem;
+        }
+
+        /* --- ARTICLE / BLOG POST --- */
+        article.blog-post {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .post-meta {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+
+        .post-meta time {
+            color: var(--accent-dim);
+        }
+
+        .post-title {
+            font-family: var(--font-mono);
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .post-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--accent-dim);
+            padding-left: 1rem;
+        }
+
+        .post-content h2 {
+            font-family: var(--font-mono);
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-primary);
+            text-transform: uppercase;
+        }
+
+        .post-content h3 {
+            font-family: var(--font-mono);
+            font-size: 1.05rem;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--accent-dim);
+        }
+
+        .post-content p {
+            margin-bottom: 1rem;
+        }
+
+        .post-content blockquote {
+            border-left: 4px solid var(--accent);
+            padding: 0.75rem 1rem;
+            margin: 1.5rem 0;
+            background: rgba(255, 60, 0, 0.05);
+            font-style: normal;
+        }
+
+        .post-content blockquote cite {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .data-box {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+        .data-box .stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.35rem 0;
+            border-bottom: 1px dotted var(--border);
+        }
+        .data-box .stat:last-child {
+            border-bottom: none;
+        }
+        .data-box .stat-label {
+            color: var(--text-secondary);
+        }
+        .data-box .stat-value {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* --- FAQ --- */
+        .faq-section {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+        }
+
+        .faq-section h2 {
+            font-family: var(--font-mono);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            margin-bottom: 0.75rem;
+            background: var(--bg-primary);
+        }
+
+        .faq-question {
+            padding: 1rem;
+            cursor: default;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: var(--card-bg);
+        }
+        .faq-question::after {
+            content: "↗";
+            color: var(--accent-dim);
+        }
+
+        .faq-answer {
+            padding: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        footer .contact {
+            font-family: var(--font-mono);
+            color: var(--accent-dim);
+        }
+
+        /* --- RESPONSIVE 768 (Pattern) --- */
+        @media (max-width: 768px) {
+            .site-grid {
+                grid-template-columns: 1fr 92% 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .site-title {
+                text-align: center;
+            }
+
+            .hamburger-menu {
+                align-self: flex-end;
+                position: relative;
+            }
+
+            .nav-menu {
+                position: static;
+                display: none;
+                border: none;
+                padding: 0.5rem 0;
+            }
+
+            .hamburger-checkbox:checked ~ .nav-menu {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            nav a {
+                display: block;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            article.blog-post {
+                padding: 1.25rem 1rem;
+            }
+
+            .post-title {
+                font-size: 1.35rem;
+            }
+
+            .data-box {
+                font-size: 0.8rem;
+                padding: 0.75rem;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hamburger-label {
+                display: none;
+            }
+
+            .nav-menu {
+                display: flex !important;
+                position: static !important;
+                background: transparent;
+                border: none;
+                padding: 0;
+                flex-direction: row;
+            }
+
+            nav ul {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-grid">
+        <header>
+            <a href="/" class="site-title">T3B02 GH 클럽 가이드</a>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox">
+                <label for="hamburger-toggle" class="hamburger-label" aria-label="메뉴 열기">
+                    <span></span><span></span><span></span>
+                </label>
+                <nav class="nav-menu" aria-label="주요 메뉴">
+                    <ul>
+                        <li><a href="/">홈</a></li>
+                        <li><a href="/guide/">가이드</a></li>
+                        <li><a href="/review/">리뷰</a></li>
+                        <li><a href="/blog/" class="active">블로그</a></li>
+                        <li><a href="/faq/">FAQ</a></li>
+                        <li><a href="/contact/">문의</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <article class="blog-post">
+                <div class="post-meta">
+                    <span>카테고리: 업계 분석</span>
+                    <time datetime="2025-03-15">2025.03.15</time>
+                </div>
+
+                <h1 class="post-title">T3B02 GH 클럽, VIP 서비스의 실제 객단가와 체류 데이터 — 2025년 Q1 분석</h1>
+
+                <p class="post-subtitle">냉철한 데이터로 바라본 공항 클럽의 현실. 마케팅 수사와 실제 이용객 패턴 사이의 괴리를 밝힌다.</p>
+
+                <div class="post-content">
+                    <p>공항 클럽은 더 이상 단순한 대기 공간이 아니다. 특히 T3B02 게이트 인근에 위치한 GH 클럽은 VIP 라운지를 표방하며 프리미엄 서비스를 내세우고 있다. 하지만 2025년 1분기(1월~3월) 동안 수집된 1,247명의 이용객 데이터와 내부 운영 자료를 분석한 결과, 마케팅 카피와 실제 이용 패턴 사이에는 상당한 간극이 존재한다.</p>
+
+                    <p>본 분석은 공항 운영사의 자체 통계, 제3자 리뷰 플랫폼 데이터(정제된 398건), 그리고 현장 관찰 기록을 교차 검증하여 작성되었다. 모든 수치는 반올림 또는 범위로
+</body>
+</html>

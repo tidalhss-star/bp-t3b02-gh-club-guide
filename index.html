@@ -1,199 +1,649 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>애니 매니아 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
-    }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>애니 매니아 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>애니 매니아</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h3>
-          <p>90년대 셀 애니메이션 제작 시 빛이 뿌옇게 흐려지거나 번지는 몽환적인 효과를 내기 위해 투명 셀판 아래에 부드러운 백라이트를 대고 조리개를 조절해 이중 노출로 촬영하던 촬영 스튜...</p>
-        </a>
-      
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공항 클럽 가이드 | T3B02 GH 클럽 가이드</title>
+    <meta name="description" content="공항 클럽 가이드: T3B02 GH 클럽에 대한 전문가 분석, 회원 리뷰 및 실전 팁. 냉철한 시각으로 공항 클럽의 현실을 파헤친다. 전화 010-6279-0862.">
+    <meta name="keywords" content="공항 클럽, 공항 클럽 가이드, T3B02 클럽, GH 클럽, 클럽 리뷰, 공항 라운지 클럽, 클럽 이용 팁">
+    <link rel="canonical" href="https://t3b02-gh-club-guide.pages.dev/">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h3>
-          <p>수많은 이세계 판타지 만화와 애니메이션에서 세계관의 핵심 축으로 등장하는 세계수 위그드라실 전승은 현대 서브컬처에 이르러 단순한 물리적 나무가 아닌 가상 데이터 그리드나 다차원 통...</p>
-        </a>
-      
+    <!-- OG 메타 -->
+    <meta property="og:title" content="공항 클럽 가이드 | T3B02 GH 클럽 가이드">
+    <meta property="og:description" content="공항 클럽의 진실, T3B02 GH 클럽 완전 분석. 가이드 라인, 리뷰, 전략적 팁.">
+    <meta property="og:url" content="https://t3b02-gh-club-guide.pages.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="공항 클럽 가이드">
+    <meta property="og:locale" content="ko_KR">
 
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h3>
-          <p>디즈니의 풀 애니메이션(초당 24장)에 대비되는 동양 리미티드 애니메이션의 정수인 3코마 작화법(초당 8장 기법)은 프레임의 부족함을 독창적인 프레임 홀드 타이밍과 과장된 정지 컷...</p>
-        </a>
-      
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="공항 클럽 가이드 | T3B02 GH 클럽 가이드">
+    <meta name="twitter:description" content="공항 클럽의 진실, T3B02 GH 클럽 완전 분석. 가이드 라인, 리뷰, 전략적 팁.">
 
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
+    <!-- JSON-LD 스키마 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EntertainmentBusiness",
+        "name": "T3B02 GH 클럽",
+        "alternateName": "공항 클럽 가이드",
+        "description": "T3B02 GH 클럽에 대한 전문가 분석, 회원 리뷰 및 실전 팁.",
+        "telephone": "010-6279-0862",
+        "url": "https://t3b02-gh-club-guide.pages.dev/",
+        "containedInPlace": {
+            "@type": "Airport",
+            "name": "공항"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "대한민국",
+            "addressRegion": "공항 지역"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "4",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "비즈니스맨K"
+                },
+                "datePublished": "2025-02-14",
+                "reviewBody": "시끄럽고 혼잡하지만 기본 자리는 확보 가능."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "3",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "여행자L"
+                },
+                "datePublished": "2025-01-28",
+                "reviewBody": "가격 대비 만족도는 애매. 서비스는 무난."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "클럽헌터J"
+                },
+                "datePublished": "2025-03-01",
+                "reviewBody": "공항에서 가장 현실적인 선택. 확실히 티어가 다름."
+            }
+        ]
+    }
+    </script>
 
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 백링크 자동화 프로그램 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+    <style>
+        /* ---------- 리셋 & 베이스 ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: Impact, 'Haettenschweiler', 'Franklin Gothic Bold', 'Arial Black', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ---------- 디자인 변수 ---------- */
+        :root {
+            --primary: #000000;
+            --secondary: #ffffff;
+            --accent: #ff3b00;
+            --font-stack: Impact, 'Haettenschweiler', 'Franklin Gothic Bold', 'Arial Black', system-ui, sans-serif;
+            --space-gap: 48px;
+            --space-padding: 72px;
+            --section-gap: 120px;
+            --border-thick: 4px;
+        }
+
+        /* ---------- 글로벌 유틸 ---------- */
+        .container {
+            width: 100%;
+            padding: 0 var(--space-padding);
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --space-padding: 32px;
+                --space-gap: 32px;
+                --section-gap: 64px;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* ---------- 헤더 & 네비게이션 ---------- */
+        header {
+            padding: 32px var(--space-padding);
+            border-bottom: var(--border-thick) solid var(--accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+            background: var(--primary);
+        }
+
+        .logo {
+            font-size: 2rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            transform: rotate(-1deg);
+            color: var(--secondary);
+            border: 2px solid var(--accent);
+            padding: 6px 16px;
+            display: inline-block;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 48px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .nav-list a {
+            padding: 8px 0;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .nav-list a:hover {
+            border-bottom-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* 햄버거 (데스크탑 숨김) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 32px;
+            height: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 0;
+            transition: 0.2s;
+        }
+
+        /* 반응형 네비 */
+        @media (max-width: 768px) {
+            header {
+                padding: 24px var(--space-padding);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-list {
+                position: fixed;
+                top: 0;
+                right: -120%;
+                width: 75%;
+                height: 100vh;
+                background: var(--primary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                font-size: 2rem;
+                border-left: var(--border-thick) solid var(--accent);
+                transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+                z-index: 200;
+                padding: 40px;
+            }
+
+            .nav-list.active {
+                right: 0;
+            }
+
+            .nav-list a {
+                border-bottom: 3px solid var(--accent);
+                padding: 12px 0;
+            }
+
+            /* 백드롭 오버레이 */
+            .nav-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.6);
+                z-index: 199;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s;
+            }
+
+            .nav-overlay.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+
+        /* ---------- 히어로 ---------- */
+        .hero {
+            padding: calc(var(--section-gap) * 1.2) var(--space-padding) var(--section-gap);
+            background: var(--primary);
+            position: relative;
+            overflow: hidden;
+            border-bottom: var(--border-thick) solid var(--accent);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 60%;
+            height: 150%;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--accent) 0px,
+                var(--accent) 4px,
+                transparent 4px,
+                transparent 20px
+            );
+            opacity: 0.08;
+            transform: rotate(-15deg);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+        }
+
+        .hero h1 {
+            font-size: clamp(4rem, 10vw, 7rem);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            line-height: 0.9;
+            color: var(--secondary);
+            margin-bottom: 32px;
+            transform: rotate(-2deg);
+            border-left: 8px solid var(--accent);
+            padding-left: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+            display: block;
+            font-size: 1.2em;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin-bottom: 48px;
+            font-family: system-ui, sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #cccccc;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 1.8rem;
+            padding: 16px 48px;
+            border: var(--border-thick) solid var(--secondary);
+            text-transform: uppercase;
+            transform: rotate(0.5deg);
+            transition: transform 0.2s, background 0.2s;
+            letter-spacing: 2px;
+        }
+
+        .hero-cta:hover {
+            transform: rotate(-2deg) scale(1.02);
+            background: #cc2f00;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px var(--space-padding) 60px;
+            }
+            .hero h1 {
+                font-size: 3.2rem;
+                transform: rotate(0deg);
+                border-left-width: 6px;
+                padding-left: 16px;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .hero-cta {
+                font-size: 1.4rem;
+                padding: 14px 32px;
+            }
+        }
+
+        /* ---------- 섹션 일반 ---------- */
+        section {
+            padding: var(--section-gap) var(--space-padding);
+            border-bottom: var(--border-thick) solid var(--accent);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 48px;
+            position: relative;
+            display: inline-block;
+            color: var(--secondary);
+            border-bottom: 4px solid var(--accent);
+            padding-bottom: 8px;
+            transform: rotate(-0.5deg);
+        }
+
+        .section-title span {
+            color: var(--accent);
+        }
+
+        /* ---------- 가이드 개요 섹션 ---------- */
+        .guide-overview {
+            background: var(--primary);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-gap) 80px;
+        }
+
+        .guide-overview .section-title {
+            grid-column: 1 / -1;
+        }
+
+        .guide-block {
+            border: var(--border-thick) solid var(--accent);
+            padding: 40px;
+            background: #0a0a0a;
+            transform: rotate(0.3deg);
+        }
+
+        .guide-block:nth-child(odd) {
+            transform: rotate(-0.5deg);
+        }
+
+        .guide-block h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            color: var(--accent);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 8px;
+        }
+
+        .guide-block p {
+            font-family: system-ui, sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #dddddd;
+        }
+
+        @media (max-width: 768px) {
+            .guide-overview {
+                grid-template-columns: 1fr;
+                gap: var(--space-gap);
+            }
+            .guide-block {
+                padding: 28px;
+                transform: rotate(0deg) !important;
+            }
+        }
+
+        /* ---------- 리뷰 섹션 ---------- */
+        .reviews {
+            background: #050505;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-gap);
+        }
+
+        .review-card {
+            border: var(--border-thick) solid var(--secondary);
+            padding: 40px 32px;
+            background: var(--primary);
+            position: relative;
+            transform: rotate(var(--r, 0deg));
+            transition: transform 0.15s;
+        }
+
+        .review-card:nth-child(1) { --r: -1deg; }
+        .review-card:nth-child(2) { --r: 0.8deg; }
+        .review-card:nth-child(3) { --r: -0.6deg; }
+        .review-card:nth-child(4) { --r: 0.4deg; }
+        .review-card:nth-child(5) { --r: -1.2deg; }
+
+        .review-card:hover {
+            transform: rotate(0deg) scale(1.01);
+        }
+
+        .review-stars {
+            color: var(--accent);
+            font-size: 2rem;
+            letter-spacing: 4px;
+            margin-bottom: 16px;
+        }
+
+        .review-text {
+            font-family: system-ui, sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            color: #e0e0e0;
+            min-height: 80px;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid var(--accent);
+            padding-top: 16px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .review-author {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .review-date {
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+            .review-card {
+                transform: rotate(0deg) !important;
+                padding: 32px 24px;
+            }
+        }
+
+        /* ---------- 추가 정보 섹션 (FAQ / 데이터) ---------- */
+        .data-section {
+            background: var(--primary);
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-gap) 80px;
+        }
+
+        .data-main {
+            border: var(--border-thick) solid var(--accent);
+            padding: 48px;
+            background: #0a0a0a;
+        }
+
+        .data-main h3 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 32px;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 12px;
+        }
+
+        .data-main ul {
+            list-style: none;
+            font-family: system-ui, sans-serif;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        .data-main ul li::before {
+            content: '▸ ';
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .data-sidebar {
+            border: var(--border-thick) solid var(--secondary);
+            padding: 40px 32px;
+            background: #0a0a0a;
+            transform: rotate(1deg);
+        }
+
+        .data-sidebar h4 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            color: var(--accent);
+        }
+
+        .data-sidebar p {
+            font-family: system-ui, sans-serif;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #cccccc;
+            margin-bottom: 24px;
+        }
+
+        .data-sidebar a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+            .data-main, .data-sidebar {
+                padding: 32px 24px;
+                transform: rotate(0deg) !important;
+            }
+        }
+
+        /* ---------- 푸터 ---------- */
+        footer {
+            background: var(--primary);
+            border-top: var(--border-thick) solid var(--accent);
+            padding: 48px var(--space-padding) 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+        }
+
+        footer .footer-left {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+        }
+
+        footer .footer-left a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        footer .footer-right {
+            display: flex;
+            gap: 48px;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        footer .footer-right a {
+            border
 </body>
 </html>

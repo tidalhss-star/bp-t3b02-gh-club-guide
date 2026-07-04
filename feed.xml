@@ -1,41 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title><![CDATA[클럽]]></title>
-  <link>https://tidalhss-star.github.io/bp-t3b02-gh-club-guide</link>
-  <description><![CDATA[클럽 - 공항 클럽 가이드 관련 최신 소식 및 가이드]]></description>
-  <language>ko</language>
-  <pubDate>Wed, 10 Jun 2026 20:48:46 GMT</pubDate>
-  <lastBuildDate>Wed, 10 Jun 2026 20:48:46 GMT</lastBuildDate>
-  <atom:link href="https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/feed.xml" rel="self" type="application/rss+xml" />
+  <title><![CDATA[공항 공항 클럽 가이드]]></title>
+  <link>https://t3b02-gh-club-guide.pages.dev</link>
+  <description><![CDATA[공항 클럽 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
+  <language>ko-KR</language>
+  <pubDate>Thu, 28 May 2026 13:59:24 GMT</pubDate>
+  <lastBuildDate>Thu, 28 May 2026 13:59:24 GMT</lastBuildDate>
+  <atom:link href="https://t3b02-gh-club-guide.pages.dev/feed.xml" rel="self" type="application/rss+xml" />
   
     <item>
-      <title><![CDATA[IMDB 별점 따위 신경 안 쓰는 내가, 기어코 건져 올린 파이트 클럽의 &#39;진짜&#39; 가치]]></title>
-      <link>https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/posts/guide-003.html</link>
-      <guid isPermaLink="true">https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/posts/guide-003.html</guid>
-      <description><![CDATA[솔직히 말이지, 요즘 것들은 영화를 너무 띄워줘. ‘파이트 클럽’이 나왔을 때도 그랬어. 온 세상이 난리 법석을 떨었지. 다들 명작이네 어쩌네 하는데, 내 눈엔 그냥 시끄러운 젊은이들의 투덜거림, 그 이상도 이하도 아니었어. 겉멋만 잔뜩 들고, 메시지는 뻔한, 한때는 ]]></description>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[공항 클럽 가이드 경험자에게 물어본 현실적인 판단 기준]]></title>
-      <link>https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/posts/interview-002-12natae.html</link>
-      <guid isPermaLink="true">https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/posts/interview-002-12natae.html</guid>
-      <description><![CDATA[### 제목: 창작한 제목비평가의 눈으로 본 싱글 프레임 타일러 더든 파이트 클럽 아, 진짜... 파이트 클럽 영화에서 타일러 더든이 등장하기 전, 싱글 프레임 장면들이 어떤 의미를 담고 있었을까? IMDB 3점대 작품들을 통해 건져낸 충격적인 연출적 실험과 숨은 디테]]></description>
-      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[쯧, 데이터 쪼가리 좀 뒤져봤더니… 쓸데없는 ‘숨겨진 보스’ 셋, 왜 짤렸는지 뻔하구만]]></title>
-      <link>https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/posts/review-001.html</link>
-      <guid isPermaLink="true">https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/posts/review-001.html</guid>
-      <description><![CDATA[하아… 요즘 애들 말이야, 맨날 똑같은 레퍼토리만 읊어대니 내가 직접 나서야지. 엘든링? 그거 뭐, 어쩌다 보니 꽤 오래 붙잡고 있었는데… 아니, 솔직히 말해서, 개발자들이 꽁꽁 숨겨둔 데이터 찌꺼기 좀 뒤져봤더니 아주 볼만한 놈들이 나오더라고. 근데 뭐, 막상 세상 ]]></description>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[공항 클럽 가이드, 30대 개발자의 비공개 노트]]></title>
-      <link>https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/posts/review-002.html</link>
-      <guid isPermaLink="true">https://tidalhss-star.github.io/bp-t3b02-gh-club-guide/posts/review-002.html</guid>
-      <description><![CDATA[공항 클럽 가이드를 찾는 사람들을 위해, 나는 오늘特別한 이야기를 하려고 한다. 요즘은 인디 게임 개발자가 스팀에서 게임을 출시하는 것이 쉽지 않다. 특히, 3일 만에 판매 중단된 게임의 이야기를 들어보면, 개발자의 마음은 얼마나 힘들까 싶다. 나도 한때는 그랬는데, ]]></description>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <title><![CDATA[공항 공항 클럽 가이드 - 공식 홈페이지 오픈 안내]]></title>
+      <link>https://t3b02-gh-club-guide.pages.dev/</link>
+      <guid isPermaLink="true">https://t3b02-gh-club-guide.pages.dev/</guid>
+      <description><![CDATA[공항 클럽 관련 최신 뉴스, 서비스 안내, 리얼 후기 정보를 신속하게 전달하는 공식 RSS 피드입니다.]]></description>
+      <pubDate>Thu, 28 May 2026 13:59:24 GMT</pubDate>
     </item>
 </channel>
 </rss>

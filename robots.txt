@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
-Sitemap: https://tidalhss-star.github.io/bp-t3b02-gh-club-guide//sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://airport-hot-guide.mapo-room-guide.xyz/sitemap.xml
